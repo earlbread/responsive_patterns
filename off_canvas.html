@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Off Canvas</title>
+    <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .dark_blue {
+        background-color: #2A457A;
+        color: #efefef;
+      }
+
+      .light_blue {
+        background-color: #099DD9;
+      }
+
+      main {
+        height: 100%;
+        width: 100%;
+      }
+
+      #menu {
+        font-size: 4em;
+        margin: 0 0.2em;
+        position: absolute;
+        right: 0;
+        padding: 0;
+      }
+
+      nav {
+        z-index: 10;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        transform: translate(-300px, 0);
+        transition: transform 0.3s;
+      }
+
+      nav.open {
+        transform: translate(0, 0);
+        transition: transform 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="light_blue"></nav>
+    <main class="dark_blue">
+      <a id="menu">☰</a>
+    </main>
+
+    <script>
+      nav = document.querySelector('nav');
+      menu = document.querySelector('#menu');
+      main = document.querySelector('main');
+
+      menu.addEventListener('click', function(e) {
+        nav.classList.add('open');
+        e.stopPropagation();
+      });
+
+      main.addEventListener('click', function(e) {
+        nav.classList.remove('open');
+      });
+    </script>
+  </body>
+</html>

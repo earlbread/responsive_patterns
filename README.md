@@ -3,7 +3,7 @@
 These are Responsive patterns from 
 [Responsive Web Design Fundamentals][1] by [Udacity][2].
 
-Here is my [live site][3].
+Here is my [live site][3], please use developer tools to check mobile version.
 
 You can also check [original version][4] by Udacty.
 

@@ -48,6 +48,23 @@
         transform: translate(0, 0);
         transition: transform 0.3s;
       }
+
+      @media screen and (min-width: 768px) {
+        #menu {
+          display: none;
+        }
+
+        nav {
+          transform: translate(0, 0);
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        body {
+          width: 800px;
+          margin: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -62,7 +79,7 @@
       main = document.querySelector('main');
 
       menu.addEventListener('click', function(e) {
-        nav.classList.add('open');
+        nav.classList.toggle('open');
         e.stopPropagation();
       });
 
